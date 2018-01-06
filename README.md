@@ -32,26 +32,33 @@ Sh.js 全称为SmartHtml.js，通过简单的配置实现更好的平台兼容�
 ### 支持浏览器
   
 Web browser (Safari/Chrome/Firefox/Opera/Edge/Webkit)  
+
 Mobile browser (Safari/Chrome/Edge/QQ浏览器/微信内嵌浏览器/QQ内嵌浏览器/淘宝内嵌浏览器/支付宝内嵌浏览器/微信小程序/UC浏览器/Opera/Opera Mini/Opera Beta/Webkit)  
+
 Hybrid browser (html5Plus Runtime)  
+
 Other browser (支持ES5以及HTML5标准储存方法即可)  
 
+
 注：处于无痕浏览模式可能会导致 Storage 方法无法使用。  
+
     Html5Plus Runtime下提前注入部分机型可能会导致 Wv 方法无法使用。  
   
   
 ### 测试机型
   
 IOS8/IOS9/IOS10/IOS11: iPhone 5, iPhone6, iPhone6Plus, iPhone7,  iPhone7Plus
+
 Android 8.0: Nexus6Plus
+
 Android 7.1: Nexus6Plus, OnePlus3, OnePlus3T, OnePlus5, Pixel, Pixel2
+
 Android 7.0: Nexus6Plus, OnePlus3, OnePlus3T, OnePlus5, Pixel, Pixel2,
+
 Android 6.0: Nexus6Plus, OnePlus3, OnePlus3T, OnePlus5, Pixel, Pixel2, 魅族E, 魅蓝Note5, 魅蓝Note2, 小米Max, 小米Note, 小米5, 小米5s, 红米Note3, 荣耀6, 荣耀Meta8, 荣耀V9, 努比亚?, 三星A8，OppoR9, OppoR9s, OppoR11, 红米5
+
 Android 5.0: 魅蓝Note1, 魅族4Pro, 红米Note3(5.0.2)
+
 Android 4.3: 联想?, 荣耀4X, VivoX5si
-
-
-
-
 
 
