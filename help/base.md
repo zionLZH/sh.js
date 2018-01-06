@@ -71,13 +71,11 @@ sh.log('Hello Word')
 
 ## Object  CONF{}
 说明：Sh.js 配置对象，此对象会传递给每一个挂载在根部的 moudle。
-
-CONF = {  
-
-  runtime: <RUNTIME_WEB / RUNTIME_PLUS / RUNTIME_WXAPP>
-  
+```
+CONF = { 
+        runtime: <RUNTIME_WEB / RUNTIME_PLUS / RUNTIME_WXAPP>  
 }
-
+```
 ##### 示例代码
 ````
 //设置当前运行环境为web浏览器
