@@ -40,9 +40,9 @@ Hybrid browser (html5Plus Runtime)
 Other browser (支持ES5以及HTML5标准储存方法即可)  
 
 
-注：处于无痕浏览模式可能会导致 Storage 方法无法使用。  
-
-    Html5Plus Runtime下提前注入部分机型可能会导致 Wv 方法无法使用。  
+注：
+- 处于无痕浏览模式可能会导致 Storage 方法无法使用。  
+- Html5Plus Runtime下提前注入部分机型可能会导致 Wv 方法无法使用。  
   
   
 ### 测试机型
