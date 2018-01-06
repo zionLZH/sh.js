@@ -28,7 +28,46 @@ sh.root('hello', function(){
 ```
 ##### 调用方法
 `sh.hello();`
+  
+  
+## *Null* plus(*Function* func)
+说明：此方法仅在RUNTIME_PLUS下生效，当页面plus生效时将自动调用 func 方法。
+*Function* func
+##### 示例代码
+```
+sh.plus(function(){
+  plus.nativeUI.toast('Hello Word')
+})
+```
+  
+  
+## *Null* err(*String* str)
+说明：输出一段错误提示
+*String* str
+##### 示例代码
+```
+sh.err('Error')
+```
+  
+  
+## *Null* log(*String* str)
+说明：输出一段提示
+*String* str
+##### 示例代码
+```
+sh.log('Hello Word')
+```
 
+## Object CONF{}
+说明：Sh.js 配置对象，此对象会传递给每一个挂载在根部的 moudle。
+CONF = {  
+  runtime: <RUNTIME_WEB / RUNTIME_PLUS / RUNTIME_WXAPP>
+}
+##### 示例代码
+````
+//设置当前运行环境为web浏览器
+sh.CONF.runtime = sh.RUNTIME_WEB
+````
 
 
 
