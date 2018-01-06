@@ -46,7 +46,6 @@ Other browser (支持ES5以及HTML5标准储存方法即可)
   
   
 ### 测试机型
-  
 IOS8/IOS9/IOS10/IOS11: iPhone 5, iPhone6, iPhone6Plus, iPhone7,  iPhone7Plus
 
 Android 8.0: Nexus6Plus
