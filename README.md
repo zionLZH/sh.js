@@ -22,7 +22,7 @@ Sh.js 全称为SmartHtml.js，通过简单的配置实现更好的平台兼容�
 - [String.format()](https://github.com/zionLZH/sh.js/blob/master/help/String.md#stringformatstr1-str2-str3-)  
   
 ### 扩展模块
-- [storage*]()  
+- [storage*](https://github.com/zionLZH/sh.js/blob/master/help/storage.md)  
 - [wv*]()  
 - [http*]()  
 - [check*]()  
