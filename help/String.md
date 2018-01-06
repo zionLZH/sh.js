@@ -9,6 +9,6 @@ var str = 'Hello %s%,Hello %s%.'
 console.log(
     str.format('Word', 'China')
 )
-// 'Hello %s%,Hello %s%.' >> 'Hello Word,Hello China'
+// 'Hello %s%,Hello %s%.' >> 'Hello Word,Hello China.'
 ```
 
