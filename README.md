@@ -10,7 +10,7 @@ Sh.js 全称为SmartHtml.js，通过简单的配置实现更好的平台兼容�
 
 # 帮助文档
   
-## 基础方法
+### 基础方法
 - [extend()]()  
 - [root()]()  
 - [plus()]()  
@@ -18,10 +18,10 @@ Sh.js 全称为SmartHtml.js，通过简单的配置实现更好的平台兼容�
 - [log()]() 
 - [CONF]()  
   
-## 类型扩展
+### 类型扩展
 - [String.format()]()  
   
-## 扩展模块
+### 扩展模块
 - [storage*]()  
 - [wv*]()  
 - [http*]()  
@@ -29,7 +29,7 @@ Sh.js 全称为SmartHtml.js，通过简单的配置实现更好的平台兼容�
   
 # 测试报告
 
-## 支持浏览器
+### 支持浏览器
   
 Web browser (Safari/Chrome/Firefox/Opera/Edge/Webkit)  
 Mobile browser (Safari/Chrome/Edge/QQ浏览器/微信内嵌浏览器/QQ内嵌浏览器/淘宝内嵌浏览器/支付宝内嵌浏览器/微信小程序/UC浏览器/Opera/Opera Mini/Opera Beta/Webkit)  
@@ -40,7 +40,7 @@ Other browser (支持ES5以及HTML5标准储存方法即可)
     Html5Plus Runtime下提前注入部分机型可能会导致 Wv 方法无法使用。  
   
   
-## 测试机型
+### 测试机型
   
 IOS8/IOS9/IOS10/IOS11: iPhone 5, iPhone6, iPhone6Plus, iPhone7,  iPhone7Plus
 Android 8.0: Nexus6Plus
