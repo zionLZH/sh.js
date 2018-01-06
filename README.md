@@ -11,12 +11,12 @@ Sh.js 全称为SmartHtml.js，通过简单的配置实现更好的平台兼容�
 # 帮助文档
   
 ### 基础方法
-- [extend()]()  
-- [root()]()  
-- [plus()]()  
-- [err()]()  
-- [log()]() 
-- [CONF]()  
+- [extend()](https://github.com/zionLZH/sh.js/blob/master/help/base.md#null--extendstring-name-function-constructor)  
+- [root()](https://github.com/zionLZH/sh.js/blob/master/help/base.md#null--rootstring-name-function-func)  
+- [plus()](https://github.com/zionLZH/sh.js/blob/master/help/base.md#null--plusfunction-func)  
+- [err()](https://github.com/zionLZH/sh.js/blob/master/help/base.md#null--errstring-str)  
+- [log()](https://github.com/zionLZH/sh.js/blob/master/help/base.md#null--logstring-str) 
+- [CONF](https://github.com/zionLZH/sh.js/blob/master/help/base.md#object--conf)  
   
 ### 类型扩展
 - [String.format()]()  
