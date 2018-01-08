@@ -23,7 +23,7 @@ Sh.js 全称为SmartHtml.js，通过简单的配置实现更好的平台兼容�
   
 ### 扩展模块
 - [storage*](https://github.com/zionLZH/sh.js/blob/master/help/storage.md)  
-- [wv*]()  
+- [wv*](https://github.com/zionLZH/sh.js/blob/master/help/wv.md)  
 - [http*]()  
 - [check*]()  
   
