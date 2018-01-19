@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>窗口传值</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="../css/mui.min.css" rel="stylesheet" />
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="mui-icon-arrowleft mui-icon mui-icon-back" @tap="back"></div>
+		<div class="mui-title">窗口传值</div>
+	</header>
+	<div class="mui-content">
+		<div style="padding: 10px;line-height: 24px;">
+			通过 sh.wv.open(path,extras) 打开新窗口 <br />
+			exrtas 为 JSON 类型 <br /><br />			
+			当传入 extras 时，Sh.js 会自动解析数据，并且通过 sh.wv.extras() 可以取回 extras 数据。
+		</div>
+		
+		<div style="padding: 10px;line-height: 24px;">
+			当前传入Extras.path数据为：<br />
+			<p style="font-size: 16px;"></p>
+		</div>
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/vue.js" ></script>
+<script type="text/javascript" src="../js/sh.min.1.js" ></script>
+<script>
+new Vue({
+	el: '.mui-bar',
+	methods:{
+		back:function(){
+			sh.wv.close()
+		}
+	}
+})
+mui('p')[0].innerHTML = JSON.stringify( sh.wv.extras().path )
+</script>
+</html>

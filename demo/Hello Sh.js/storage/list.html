@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>数据储存 - Storage</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="../css/mui.min.css" rel="stylesheet" />
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="mui-icon-arrowleft mui-icon mui-icon-back" @tap="back"></div>
+		<div class="mui-title">数据储存 - Storage</div>
+	</header>
+	<div class="mui-content">
+		<div style="padding: 10px;line-height: 24px;">Storage模块提供一套简单易用数据储存方案，包括增、删、读、写等方法。</div>
+		<div style="padding: 10px;line-height: 24px;">假设这是登录环境，用户输入账号：zion，密码：000000</div>
+		<ul class="mui-table-view">
+		    <li class="mui-table-view-cell" @tap="save">
+		        <a class="mui-navigate-right">保存登录数据</a>
+		    </li>
+		</ul>
+		<ul class="mui-table-view">
+		    <li class="mui-table-view-cell" @tap="get">
+		        <a class="mui-navigate-right">读取登录数据</a>
+		    </li>
+		</ul>
+		<ul class="mui-table-view">
+		    <li class="mui-table-view-cell" @tap="remove">
+		        <a class="mui-navigate-right">删除登录数据</a>
+		    </li>
+		</ul>
+		<ul class="mui-table-view">
+		    <li class="mui-table-view-cell" @tap="clear">
+		        <a class="mui-navigate-right">清除数据储存</a>
+		    </li>
+		</ul>
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/vue.js" ></script>
+<script type="text/javascript" src="../js/sh.min.1.js" ></script>
+<script>
+new Vue({
+	el: '.mui-bar',
+	methods:{
+		back:function(){
+			sh.wv.close()
+		}
+	}
+})
+var uInfo = {id: 'zion', pwd: '000000'}
+new Vue({
+	el: '.mui-content',
+	methods:{
+		save: function(){
+			sh.storage.set('uInfo', uInfo);
+			alert('保存登录数据完毕')
+		},
+		get: function(){
+			var userData = JSON.stringify(sh.storage.get('uInfo'));
+			alert('key:uInfo \r\n' + userData);
+		},
+		remove: function(){
+			sh.storage.del('uInfo');
+			alert('删除登录数据完毕')
+		},
+		clear: function(){
+			sh.storage.clear(true);
+			alert('已经清除数据储存')
+		}
+	}
+})
+</script>
+</html>

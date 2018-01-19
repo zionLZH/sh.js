@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>创建窗口</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="../css/mui.min.css" rel="stylesheet" />
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="mui-icon-arrowleft mui-icon mui-icon-back" @tap="back"></div>
+		<div class="mui-title">创建窗口</div>
+	</header>
+	<div class="mui-content">
+		<div style="padding: 10px;line-height: 24px;">
+			通过 sh.wv.open(path,extras) 打开新窗口 <br />
+			通过 sh.wv.close() 即可关闭窗口
+		</div>
+		<ul class="mui-table-view">
+		    <li class="mui-table-view-cell" @tap="back">
+		        <a class="mui-navigate-right" >关闭窗口</a>
+		    </li>
+		</ul>
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/vue.js" ></script>
+<script type="text/javascript" src="../js/sh.min.1.js" ></script>
+<script>
+new Vue({
+	el: '.mui-bar',
+	methods:{
+		back:function(){
+			sh.wv.close()
+		}
+	}
+})
+new Vue({
+	el: '.mui-table-view',
+	data:{
+
+	},
+	methods:{
+		back: function(path){
+			sh.wv.close()
+		}
+	}
+})
+</script>
+</html>

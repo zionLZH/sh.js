@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>窗口管理 - Webview</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="../css/mui.min.css" rel="stylesheet" />
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="mui-icon-arrowleft mui-icon mui-icon-back" @tap="back"></div>
+		<div class="mui-title">窗口管理 - Webview</div>
+	</header>
+	<div class="mui-content">
+		<div style="padding: 10px;line-height: 24px;">Webview模块提供一套简单易用窗口管理方案，包括：创建窗口、窗口传值、关闭窗口、切换导航(小程序专用)等方法。</div>
+		<ul class="mui-table-view">
+		    <li v-for="item in list" class="mui-table-view-cell" @tap="go(item.path)">
+		        <a class="mui-navigate-right" v-text="item.text"></a>
+		    </li>
+		</ul>
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/vue.js" ></script>
+<script type="text/javascript" src="../js/sh.min.1.js" ></script>
+<script>
+new Vue({
+	el: '.mui-bar',
+	methods:{
+		back:function(){
+			sh.wv.close()
+		}
+	}
+})
+new Vue({
+	el: '.mui-table-view',
+	data:{
+		list:[
+			{text : '创建窗口', path: 'open.html'},
+			{text : '窗口传值', path: 'extras.html'},
+			{text : '查找窗口 - Plus', path: 'find.html'},
+			{text : '切换导航 - WxApp', path: 'switch.html'},
+		]
+	},
+	methods:{
+		go: function(path){
+			sh.wv.open(path,{
+				path: path
+			})
+		}
+	}
+})
+</script>
+</html>

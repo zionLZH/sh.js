@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>切换导航</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="../css/mui.min.css" rel="stylesheet" />
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="mui-icon-arrowleft mui-icon mui-icon-back" @tap="back"></div>
+		<div class="mui-title">切换导航</div>
+	</header>
+	<div class="mui-content">
+		<div style="padding: 10px;line-height: 24px;">
+			通过 sh.wv.switch(path) 切换导航 <br /><br />			
+			该方法当且仅当在微信小程序中可使用。
+		</div>
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/vue.js" ></script>
+<script type="text/javascript" src="../js/sh.min.1.js" ></script>
+<script>
+new Vue({
+	el: '.mui-bar',
+	methods:{
+		back:function(){
+			sh.wv.close()
+		}
+	}
+})
+</script>
+</html>

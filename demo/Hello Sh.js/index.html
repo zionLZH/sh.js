@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<link href="css/mui.min.css" rel="stylesheet"/>
+</head>
+<style>
+.bottom {padding: 10px;line-height: 50px;text-align: center;}
+.bottom a {font-size: 18px;color: #444 !important;}
+.bottom img {width: 24px;height: 24px;margin-right: 5px;}
+</style>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="mui-title">Hello Sh.js</div>
+	</header>
+	<div class="mui-content">
+		<div style="padding: 10px;line-height: 24px;">Sh.js 提供一套跨平台兼容方案，针对前端常用方法实现跨平台差异性统一，从而实现一套代码无需修改或少量修改，即可过渡多平台。</div>
+		<p style="padding: 10px;line-height: 24px;">兼容平台：PC网页、移动页面、公众号网页、微信小程序、Html5Plus</p>
+		<p style="padding: 10px;line-height: 24px;">测试前请先在 sh.min.1.js 中配置 runtime</p>
+		<ul class="mui-table-view">
+		    <li v-for="item in list" class="mui-table-view-cell" @tap="go(item.path)">
+		        <a class="mui-navigate-right" v-text="item.text"></a>
+		    </li>
+		</ul>
+		<div class="bottom">
+			<a href="https://github.com/zionLZH/sh.js" target="_blank">
+				<img src="images/GitHub.png"/>Github
+			</a>
+		</div>
+	</div>
+</body>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/vue.js" ></script>
+<script type="text/javascript" src="js/sh.min.1.js" ></script>
+<script>
+new Vue({
+	el: '.mui-table-view',
+	data:{
+		list:[
+			{text: '窗口管理 - Webview', path: 'webview/list.html'},
+			{text: '数据储存 - Storage', path: 'storage/list.html'},
+			{text: '网络请求 - Http', path: 'http/list.html'},
+		]
+	},
+	methods:{
+		go:function(path){
+			sh.wv.open(path,{
+				path: path
+			})
+		}
+	}
+})
+</script>
+</html>

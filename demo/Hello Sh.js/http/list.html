@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>网络请求 - Http</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<link href="../css/mui.min.css" rel="stylesheet" />
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<div class="mui-icon-arrowleft mui-icon mui-icon-back" @tap="back"></div>
+		<div class="mui-title">网络请求 - Http</div>
+	</header>
+	<div class="mui-content">
+		<div style="padding: 10px;line-height: 24px;">Http模块提供一套精简版的网络请求方案，仅仅包括基础的POST、GET方法。</div>
+		<div style="padding: 10px;line-height: 24px;">在html5plus下可以直接跨域且返回数据需要满足JSON格式，而其他环境下需要自行配置跨域请求，不支持JSONP。</div>
+		<ul class="mui-table-view">
+		    <li class="mui-table-view-cell" @tap="get">
+		        <a class="mui-navigate-right">GET - 北京天气预报</a>
+		    </li>
+		</ul>
+	</div>
+</body>
+<script src="../js/mui.min.js"></script>
+<script type="text/javascript" src="../js/vue.js" ></script>
+<script type="text/javascript" src="../js/sh.min.1.js" ></script>
+<script>
+new Vue({
+	el: '.mui-bar',
+	methods:{
+		back:function(){
+			sh.wv.close()
+		}
+	}
+})
+new Vue({
+	el: '.mui-content',
+	methods:{
+		get: function(){
+			sh.http.get({
+				url: 'http://www.sojson.com/open/api/weather/json.shtml',
+				data:{city:'北京'},
+				success: function(data){
+					alert(JSON.stringify(data))
+				},
+				error: function(){
+					alert('获取失败，请检查网络。')
+				}
+			})
+		}
+	}
+})
+</script>
+</html>
