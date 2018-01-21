@@ -8,6 +8,16 @@ Sh.js 前身是我自己封装的Autoc，由于工作需要，有时候需要一
 
 Sh.js 全称为SmartHtml.js，通过简单的配置实现更好的平台兼容处理，从而减少开发者的工作量。
 
+# 最近更新
+2018-01-21:
+
+更新1.1版本，更新内容如下：
+
+1: 修改extend方法挂载模块的方式，由原本的立即挂载修改为懒加载，当模块方法第一次被调用时挂载模块。
+
+2: 支持自动切换运行环境，现在无须进行配置即可根据当前环境切换对应兼容方法（但是这增加了在plus未注入的情况下因调用plus方法导致抛出异常的风险！）
+
+3: 由于 root 方法挂载function，因而不做改变。
 # 帮助文档
   
 ### 基础方法
@@ -38,6 +48,8 @@ Mobile browser (Safari/Chrome/Edge/QQ浏览器/微信内嵌浏览器/QQ内嵌浏
 Hybrid browser (html5Plus Runtime)  
 
 Other browser (支持ES5以及HTML5标准储存方法即可)  
+
+electron
 
 
 注：
