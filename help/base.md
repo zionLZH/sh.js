@@ -1,7 +1,7 @@
 # 基础方法
 
 ## *Null*  extend(*String* name, *Function* constructor)
-说明：将 module 挂载到 Sh 的根部，并且可公开使用，执行方法之后 sh.js 会创建对应constructor并且传入 sh 自身以及配置对象。
+说明：将 module 挂载到 Sh 的根部，并且可公开使用，执行方法之后 sh.js 会在第一次调用extend方法时创建对应constructor并且传入 sh 自身以及配置对象。
 
 *String* name
 
@@ -69,8 +69,10 @@ sh.err('Error')
 sh.log('Hello Word')
 ```
 
-## Object  CONF{}
+## Object  <del>CONF{}</del>
 说明：Sh.js 配置对象，此对象会传递给每一个挂载在根部的 moudle。
+
+提示：在1.1版本之后可以自动切换运行环境。
 ```
 CONF = { 
         runtime: <RUNTIME_WEB / RUNTIME_PLUS / RUNTIME_WXAPP>  
